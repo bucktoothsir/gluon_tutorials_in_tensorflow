@@ -28,5 +28,5 @@ def load_data_fashion_mnist(data_dir, one_hot=False, num_classes=10):
 
 
 def accuracy(output, label):
-    # output, label都是batch_size*1的向量
+    # output, label都是batch_size*num_class的向量
     return tf.reduce_mean(tf.cast(tf.equal(tf.argmax(output, 1), tf.argmax(label, 1)), tf.float32))
